@@ -40,4 +40,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Get the sentences for the user.
+     */
+    public function sentences()
+    {
+        return $this->hasMany(Sentence::class);
+    }
 }
