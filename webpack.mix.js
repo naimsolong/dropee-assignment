@@ -11,7 +11,50 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
+
+const findPath = {
+    vendor: {
+        css: {
+            resources: function(vendor, filePath) {
+                return 'resources/vendor/'+vendor+'/sass/'+filePath
+            },
+            public: function(vendor, filePath) {
+                return 'public/vendor/'+vendor+'/css/'+filePath
+            }
+        },
+        js: {
+            resources: function(vendor, filePath) {
+                return 'resources/vendor/'+vendor+'/js/'+filePath
+            },
+            public: function(vendor, filePath) {
+                return 'public/vendor/'+vendor+'/js/'+filePath
+            }
+        },
+    },
+    modules: {
+        css: {
+            resources: function(module, filePath) {
+                return 'Modules/'+module+'/Resources/assets/sass/'+filePath
+            },
+            public: function(module, filePath) {
+                return 'public/modules/'+module+'/css/'+filePath
+            }
+        },
+        js: {
+            resources: function(module, filePath) {
+                return 'Modules/'+module+'/Resources/assets/js/'+filePath
+            },
+            public: function(module, filePath) {
+                return 'public/modules/'+module+'/js/'+filePath
+            }
+        },
+    }
+};
+
+
+// All adminlte package
+mix
+.sass(
+    findPath.vendor.css.resources('bootstrap','bootstrap.scss'),
+    findPath.vendor.css.public('bootstrap','bootstrap.css')
+)
