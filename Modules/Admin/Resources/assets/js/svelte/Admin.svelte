@@ -211,11 +211,11 @@
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text">Text Color</span>
-                            <input type="color" name="text_color" class="form-control form-control-color" value="">
+                            <input type="color" name="text_color" class="form-control form-control-color" value="#000000">
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text">Background Color</span>
-                            <input type="color" name="background_color" class="form-control form-control-color" value="">
+                            <input type="color" name="background_color" class="form-control form-control-color" value="#ffffff">
                         </div>
                         <div class="input-group" style="width: 100%;">
                             <button class="btn btn-outline-secondary float-end" type="submit">Save</button>
