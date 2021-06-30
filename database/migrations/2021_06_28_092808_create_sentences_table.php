@@ -19,6 +19,8 @@ class CreateSentencesTable extends Migration
             $table->string('value');
             $table->integer('row')->default(0);
             $table->integer('column')->default(0);
+            $table->string('text_color')->default('');
+            $table->string('background_color')->default('');
             $table->timestamps();
         });
     }

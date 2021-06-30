@@ -11,6 +11,19 @@
 |
 */
 
+use Modules\Admin\Http\Controllers;
+
 Route::prefix('admin')->group(function() {
-    Route::get('/', 'AdminController@index');
+    Route::middleware(['admin.auth.already'])->group(function() {
+        Route::get('/login', [Controllers\AuthController::class, 'login']);
+
+        Route::post('/login', [Controllers\AuthController::class, 'loginAuth']);
+    });
+    
+    Route::middleware(['admin.auth'])->group(function() {
+        Route::get('/logout', [Controllers\AuthController::class, 'logout']);
+        
+        Route::get('/', [Controllers\AdminController::class, 'index']);
+
+    });
 });

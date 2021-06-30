@@ -13,6 +13,13 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/admin', function (Request $request) {
-    return $request->user();
+use Modules\Admin\Http\Controllers;
+
+Route::prefix('admin')->middleware('auth:sanctum')->group(function() {
+    Route::post('/get/all', [Controllers\ApiController::class, 'get_all']);
+    
+    Route::post('/save/setting', [Controllers\ApiController::class, 'save_setting']);
+    
+    Route::post('/save/sentence/{id?}', [Controllers\ApiController::class, 'save_sentence']);
+    Route::post('/delete/sentence/{id}', [Controllers\ApiController::class, 'delete_sentence']);
 });

@@ -1,9 +1,6 @@
 @extends('admin::layouts.master')
 
-@section('content')
-    <h1>Hello World</h1>
+@section('title', 'Admin Dashboard')
 
-    <p>
-        This view is loaded from module: {!! config('admin.name') !!}
-    </p>
+@section('content')
 @endsection

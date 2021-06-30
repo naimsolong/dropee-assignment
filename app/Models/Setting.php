@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Sentence extends Model
+class Setting extends Model
 {
     use HasFactory;
 
@@ -15,11 +15,8 @@ class Sentence extends Model
      * @var array
      */
     protected $fillable = [
-        'value',
         'row',
         'column',
-        'text_color',
-        'background_color',
     ];
 
     /**

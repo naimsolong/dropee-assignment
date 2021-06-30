@@ -1,5 +1,7 @@
 const mix = require('laravel-mix');
 
+require('laravel-mix-svelte');
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -51,10 +53,21 @@ const findPath = {
     }
 };
 
-
-// All adminlte package
 mix
 .sass(
     findPath.vendor.css.resources('bootstrap','bootstrap.scss'),
     findPath.vendor.css.public('bootstrap','bootstrap.css')
 )
+.js(
+    findPath.vendor.js.resources('bootstrap','bootstrap.js'),
+    findPath.vendor.js.public('bootstrap','bootstrap.js')
+)
+.js(
+    findPath.vendor.js.resources('dropee','form.js'),
+    findPath.vendor.js.public('dropee','form.js')
+);
+
+mix.js(
+    findPath.modules.js.resources('Admin','app.js'),
+    findPath.modules.js.public('Admin','app.js')
+).svelte();
