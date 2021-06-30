@@ -27,15 +27,19 @@ After done install all required services, may follow these step:
 	```
 	npm run prod
 	```
-6. Run migration
+6. Generate key
+	```
+	php artisan key:generate
+	```
+7. Run migration
 	```
 	php artisan migrate
 	```
-7. Run specific seeder
+8. Run specific seeder
 	```
 	php artisan db:seed --class=InitSeeder
 	```
-8. Optimize the project
+9. Optimize the project
 	```
 	php artisan optimize
 	```
