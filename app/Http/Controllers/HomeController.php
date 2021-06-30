@@ -9,6 +9,12 @@ use App\Models;
 
 class HomeController extends Controller
 {
+    function home() {
+        return RSP::view([
+            'view_name' => 'home',
+        ]);
+    }
+
     function sentence($email) {
         $user = Models\User::where('email', $email)->first();
         $setting = $user->setting()->first();

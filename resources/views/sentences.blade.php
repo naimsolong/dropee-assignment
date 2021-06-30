@@ -14,9 +14,7 @@
                     {{$sentences[$i][$j]->value}}
                 </td>
                 @else
-                <td class="text-center">
-
-                </td>
+                <td></td>
                 @endif
                 @endfor
             </tr>
