@@ -36,8 +36,8 @@ class InitSeeder extends Seeder
             ]),
             new Sentence([
                 'value' => 'B2B Marketplace',
-                'row' => 1,
-                'column' => 4,
+                'row' => 3,
+                'column' => 1,
             ]),
             new Sentence([
                 'value' => 'SaaS enabled marketplace',
@@ -46,12 +46,12 @@ class InitSeeder extends Seeder
             ]),
             new Sentence([
                 'value' => 'Provide Transparency',
-                'row' => 3,
-                'column' => 1,
+                'row' => 4,
+                'column' => 4,
             ]),
             new Sentence([
                 'value' => 'Build Trust',
-                'row' => 4,
+                'row' => 1,
                 'column' => 4,
             ]),
         ]);
