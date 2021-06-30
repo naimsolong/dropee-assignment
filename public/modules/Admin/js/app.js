@@ -62,132 +62,133 @@ function get_each_context(ctx, list, i) {
 function create_each_block(ctx) {
   var li;
   var form;
-  var input0;
-  var input0_value_value;
+  var h3;
   var t0;
+  var t1_value =
+  /*i*/
+  ctx[18] + 1 + "";
+  var t1;
+  var t2;
   var div0;
   var span0;
-  var t2;
-  var input1;
-  var input1_value_value;
-  var t3;
+  var t4;
+  var input0;
+  var input0_value_value;
+  var t5;
   var div1;
   var span1;
-  var t5;
+  var t7;
+  var input1;
+  var input1_value_value;
+  var t8;
+  var span2;
+  var t10;
   var input2;
   var input2_value_value;
-  var t6;
-  var span2;
-  var t8;
-  var input3;
-  var input3_value_value;
-  var t9;
+  var t11;
   var div2;
   var span3;
-  var t11;
-  var input4;
-  var input4_value_value;
-  var t12;
+  var t13;
+  var input3;
+  var input3_value_value;
+  var t14;
   var div3;
   var span4;
-  var t14;
-  var input5;
-  var input5_value_value;
-  var t15;
+  var t16;
+  var input4;
+  var input4_value_value;
+  var t17;
   var div4;
   var button0;
-  var t17;
+  var t19;
   var button1;
-  var t18;
+  var t20;
   var button1_data_id_value;
   var button1_data_row_value;
   var form_action_value;
-  var t19;
+  var t21;
   var mounted;
   var dispose;
   return {
     c: function c() {
       li = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
       form = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("form");
-      input0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
-      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      h3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h3");
+      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("Data #");
+      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t1_value);
+      t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       span0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
       span0.textContent = "Value";
-      t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      input1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
-      t3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      input0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
+      t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       span1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
       span1.textContent = "Row";
-      t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      input2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
-      t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      input1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
+      t8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       span2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
       span2.textContent = "Column";
-      t8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      input3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
-      t9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      input2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
+      t11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       span3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
       span3.textContent = "Text Color";
-      t11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      input4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
-      t12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      input3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
+      t14 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       span4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
       span4.textContent = "Background Color";
-      t14 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      input5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
-      t15 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      input4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
+      t17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       button0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
       button0.textContent = "Save";
-      t17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      button1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
-      t18 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("Delete");
       t19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "type", "hidden");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "name", "data_row");
-      input0.value = input0_value_value =
-      /*i*/
-      ctx[18];
+      button1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
+      t20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("Delete");
+      t21 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span0, "class", "input-group-text");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "type", "text");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "name", "value");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "class", "form-control");
-      input1.value = input1_value_value =
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "type", "text");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "name", "value");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "class", "form-control");
+      input0.value = input0_value_value =
       /*value*/
       ctx[12];
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "input-group mb-3");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span1, "class", "input-group-text");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input2, "type", "number");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input2, "name", "row");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input2, "class", "form-control");
-      input2.value = input2_value_value =
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "type", "number");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "name", "row");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "class", "form-control");
+      input1.value = input1_value_value =
       /*row*/
       ctx[13];
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span2, "class", "input-group-text");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input3, "type", "number");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input3, "name", "column");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input3, "class", "form-control");
-      input3.value = input3_value_value =
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input2, "type", "number");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input2, "name", "column");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input2, "class", "form-control");
+      input2.value = input2_value_value =
       /*column*/
       ctx[14];
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "input-group mb-3");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span3, "class", "input-group-text");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input4, "type", "color");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input4, "name", "text_color");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input4, "class", "form-control form-control-color");
-      input4.value = input4_value_value =
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input3, "type", "color");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input3, "name", "text_color");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input3, "class", "form-control form-control-color");
+      input3.value = input3_value_value =
       /*text_color*/
       ctx[15];
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "input-group mb-3");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span4, "class", "input-group-text");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input5, "type", "color");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input5, "name", "background_color");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input5, "class", "form-control form-control-color");
-      input5.value = input5_value_value =
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input4, "type", "color");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input4, "name", "background_color");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input4, "class", "form-control form-control-color");
+      input4.value = input4_value_value =
       /*background_color*/
       ctx[16];
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div3, "class", "input-group mb-3");
@@ -207,43 +208,45 @@ function create_each_block(ctx) {
       /*id*/
       ctx[11]);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form, "method", "POST");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li, "class", "list-group-item");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li, "class", "list-group-item py-5");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, li, anchor);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li, form);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, input0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, h3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(h3, t0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(h3, t1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t2);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div0);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, span0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, t2);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, input1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, t4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, input0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t5);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div1);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, span1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, t5);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, input2);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, t6);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, span2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, t7);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, input1);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, t8);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, input3);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t9);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, span2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, t10);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, input2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t11);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div2);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, span3);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, t11);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, input4);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t12);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, t13);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, input3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t14);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div3);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div3, span4);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div3, t14);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div3, input5);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t15);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div3, t16);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div3, input4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t17);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div4);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div4, button0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div4, t17);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div4, t19);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div4, button1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button1, t18);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li, t19);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button1, t20);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li, t21);
 
       if (!mounted) {
         dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(button1, "click",
@@ -257,42 +260,42 @@ function create_each_block(ctx) {
     p: function p(ctx, dirty) {
       if (dirty &
       /*sentences*/
-      4 && input1_value_value !== (input1_value_value =
+      4 && input0_value_value !== (input0_value_value =
       /*value*/
-      ctx[12]) && input1.value !== input1_value_value) {
+      ctx[12]) && input0.value !== input0_value_value) {
+        input0.value = input0_value_value;
+      }
+
+      if (dirty &
+      /*sentences*/
+      4 && input1_value_value !== (input1_value_value =
+      /*row*/
+      ctx[13])) {
         input1.value = input1_value_value;
       }
 
       if (dirty &
       /*sentences*/
       4 && input2_value_value !== (input2_value_value =
-      /*row*/
-      ctx[13])) {
+      /*column*/
+      ctx[14])) {
         input2.value = input2_value_value;
       }
 
       if (dirty &
       /*sentences*/
       4 && input3_value_value !== (input3_value_value =
-      /*column*/
-      ctx[14])) {
+      /*text_color*/
+      ctx[15])) {
         input3.value = input3_value_value;
       }
 
       if (dirty &
       /*sentences*/
       4 && input4_value_value !== (input4_value_value =
-      /*text_color*/
-      ctx[15])) {
-        input4.value = input4_value_value;
-      }
-
-      if (dirty &
-      /*sentences*/
-      4 && input5_value_value !== (input5_value_value =
       /*background_color*/
       ctx[16])) {
-        input5.value = input5_value_value;
+        input4.value = input4_value_value;
       }
 
       if (dirty &
@@ -444,7 +447,7 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div4, "class", "card-body");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div5, "class", "card my-3");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div6, "class", "card-header");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul2, "class", "list-group");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul2, "class", "list-group list-group-flush");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div7, "class", "card-body");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div8, "class", "card-footer");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div9, "class", "card my-3");

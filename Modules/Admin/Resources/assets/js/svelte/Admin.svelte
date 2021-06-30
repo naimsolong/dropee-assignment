@@ -152,11 +152,11 @@
             <h3>Sentences</h3>
         </div>
         <div class="card-body">
-            <ul class="list-group">
+            <ul class="list-group list-group-flush">
                 {#each sentences as { id, value, row, column, text_color, background_color }, i}
-                <li class="list-group-item">
+                <li class="list-group-item py-5">
                     <form action="/api/admin/save/sentence/{id}" method="POST" on:submit|preventDefault|stopPropagation={saveSentenceForm}>
-                        <input type="hidden" name="data_row" value="{i}">
+                        <h3>Data #{i+1}</h3>
                         <div class="input-group mb-3">
                             <span class="input-group-text">Value</span>
                             <input type="text" name="value" class="form-control" value="{value}">
