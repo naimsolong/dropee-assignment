@@ -56,7 +56,7 @@ function get_each_context(ctx, list, i) {
   child_ctx[18] = list[i].background_color;
   child_ctx[20] = i;
   return child_ctx;
-} // (170:16) {#each sentences as { id, value, row, column, text_color, background_color }
+} // (176:16) {#each sentences as { id, value, row, column, text_color, background_color }
 
 
 function create_each_block(ctx) {
@@ -708,6 +708,9 @@ function instance($$self, $$props, $$invalidate) {
     if (e.target.value > total_row) {
       alert("Row cannot exceed than " + total_row);
       e.target.value = total_row;
+    } else if (e.target.value <= 0) {
+      alert("Row cannot less than 0");
+      e.target.value = 1;
     }
   }
 
@@ -715,6 +718,9 @@ function instance($$self, $$props, $$invalidate) {
     if (e.target.value > total_column) {
       alert("Column cannot exceed than " + total_column);
       e.target.value = total_column;
+    } else if (e.target.value <= 0) {
+      alert("Column cannot less than 0");
+      e.target.value = 1;
     }
   }
 
