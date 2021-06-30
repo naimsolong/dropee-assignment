@@ -107,6 +107,20 @@
             }
         });
     }
+
+    function changeRow(e) {
+        if(e.target.value > total_row) {
+            alert('Row cannot exceed than '+total_row);
+            e.target.value = total_row;
+        }
+    }
+
+    function changeColumn(e) {
+        if(e.target.value > total_column) {
+            alert('Column cannot exceed than '+total_column);
+            e.target.value = total_column;
+        }
+    }
 </script>
 
 <div class="container">
@@ -163,9 +177,9 @@
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text">Row</span>
-                            <input type="number" name="row" class="form-control" value="{row}">
+                            <input type="number" name="row" class="form-control" value="{row}" on:change={changeRow}>
                             <span class="input-group-text">Column</span>
-                            <input type="number" name="column" class="form-control" value="{column}">
+                            <input type="number" name="column" class="form-control" value="{column}" on:change={changeColumn}>
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text">Text Color</span>

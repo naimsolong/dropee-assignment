@@ -48,15 +48,15 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[11] = list[i].id;
-  child_ctx[12] = list[i].value;
-  child_ctx[13] = list[i].row;
-  child_ctx[14] = list[i].column;
-  child_ctx[15] = list[i].text_color;
-  child_ctx[16] = list[i].background_color;
-  child_ctx[18] = i;
+  child_ctx[13] = list[i].id;
+  child_ctx[14] = list[i].value;
+  child_ctx[15] = list[i].row;
+  child_ctx[16] = list[i].column;
+  child_ctx[17] = list[i].text_color;
+  child_ctx[18] = list[i].background_color;
+  child_ctx[20] = i;
   return child_ctx;
-} // (156:16) {#each sentences as { id, value, row, column, text_color, background_color }
+} // (170:16) {#each sentences as { id, value, row, column, text_color, background_color }
 
 
 function create_each_block(ctx) {
@@ -66,7 +66,7 @@ function create_each_block(ctx) {
   var t0;
   var t1_value =
   /*i*/
-  ctx[18] + 1 + "";
+  ctx[20] + 1 + "";
   var t1;
   var t2;
   var div0;
@@ -159,7 +159,7 @@ function create_each_block(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "class", "form-control");
       input0.value = input0_value_value =
       /*value*/
-      ctx[12];
+      ctx[14];
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "input-group mb-3");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span1, "class", "input-group-text");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "type", "number");
@@ -167,14 +167,14 @@ function create_each_block(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "class", "form-control");
       input1.value = input1_value_value =
       /*row*/
-      ctx[13];
+      ctx[15];
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span2, "class", "input-group-text");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input2, "type", "number");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input2, "name", "column");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input2, "class", "form-control");
       input2.value = input2_value_value =
       /*column*/
-      ctx[14];
+      ctx[16];
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "input-group mb-3");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span3, "class", "input-group-text");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input3, "type", "color");
@@ -182,7 +182,7 @@ function create_each_block(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input3, "class", "form-control form-control-color");
       input3.value = input3_value_value =
       /*text_color*/
-      ctx[15];
+      ctx[17];
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "input-group mb-3");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span4, "class", "input-group-text");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input4, "type", "color");
@@ -190,23 +190,23 @@ function create_each_block(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input4, "class", "form-control form-control-color");
       input4.value = input4_value_value =
       /*background_color*/
-      ctx[16];
+      ctx[18];
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div3, "class", "input-group mb-3");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button0, "class", "btn btn-outline-secondary float-end");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button0, "type", "submit");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button1, "class", "btn btn-outline-secondary float-end");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button1, "data-id", button1_data_id_value =
       /*id*/
-      ctx[11]);
+      ctx[13]);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button1, "data-row", button1_data_row_value =
       /*i*/
-      ctx[18]);
+      ctx[20]);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button1, "type", "button");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div4, "class", "input-group");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div4, "width", "100%");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form, "action", form_action_value = "/api/admin/save/sentence/" +
       /*id*/
-      ctx[11]);
+      ctx[13]);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form, "method", "POST");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li, "class", "list-group-item py-5");
     },
@@ -249,7 +249,11 @@ function create_each_block(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li, t21);
 
       if (!mounted) {
-        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(button1, "click",
+        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input1, "change",
+        /*changeRow*/
+        ctx[6]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input2, "change",
+        /*changeColumn*/
+        ctx[7]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(button1, "click",
         /*deleteSentenceForm*/
         ctx[5]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(form, "submit", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.stop_propagation)((0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
         /*saveSentenceForm*/
@@ -262,7 +266,7 @@ function create_each_block(ctx) {
       /*sentences*/
       4 && input0_value_value !== (input0_value_value =
       /*value*/
-      ctx[12]) && input0.value !== input0_value_value) {
+      ctx[14]) && input0.value !== input0_value_value) {
         input0.value = input0_value_value;
       }
 
@@ -270,7 +274,7 @@ function create_each_block(ctx) {
       /*sentences*/
       4 && input1_value_value !== (input1_value_value =
       /*row*/
-      ctx[13])) {
+      ctx[15])) {
         input1.value = input1_value_value;
       }
 
@@ -278,7 +282,7 @@ function create_each_block(ctx) {
       /*sentences*/
       4 && input2_value_value !== (input2_value_value =
       /*column*/
-      ctx[14])) {
+      ctx[16])) {
         input2.value = input2_value_value;
       }
 
@@ -286,7 +290,7 @@ function create_each_block(ctx) {
       /*sentences*/
       4 && input3_value_value !== (input3_value_value =
       /*text_color*/
-      ctx[15])) {
+      ctx[17])) {
         input3.value = input3_value_value;
       }
 
@@ -294,7 +298,7 @@ function create_each_block(ctx) {
       /*sentences*/
       4 && input4_value_value !== (input4_value_value =
       /*background_color*/
-      ctx[16])) {
+      ctx[18])) {
         input4.value = input4_value_value;
       }
 
@@ -302,7 +306,7 @@ function create_each_block(ctx) {
       /*sentences*/
       4 && button1_data_id_value !== (button1_data_id_value =
       /*id*/
-      ctx[11])) {
+      ctx[13])) {
         (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button1, "data-id", button1_data_id_value);
       }
 
@@ -310,7 +314,7 @@ function create_each_block(ctx) {
       /*sentences*/
       4 && form_action_value !== (form_action_value = "/api/admin/save/sentence/" +
       /*id*/
-      ctx[11])) {
+      ctx[13])) {
         (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form, "action", form_action_value);
       }
     },
@@ -519,9 +523,9 @@ function create_fragment(ctx) {
       if (!mounted) {
         dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input0, "input",
         /*input0_input_handler*/
-        ctx[6]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input1, "input",
+        ctx[8]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input1, "input",
         /*input1_input_handler*/
-        ctx[7]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(form1, "submit", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.stop_propagation)((0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
+        ctx[9]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(form1, "submit", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.stop_propagation)((0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
         /*saveSettingForm*/
         ctx[3]))), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(form2, "submit", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.stop_propagation)((0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
         /*saveSentenceForm*/
@@ -554,8 +558,8 @@ function create_fragment(ctx) {
       }
 
       if (dirty &
-      /*sentences, saveSentenceForm, deleteSentenceForm*/
-      52) {
+      /*sentences, saveSentenceForm, deleteSentenceForm, changeColumn, changeRow*/
+      244) {
         each_value =
         /*sentences*/
         ctx[2];
@@ -700,6 +704,20 @@ function instance($$self, $$props, $$invalidate) {
     });
   }
 
+  function changeRow(e) {
+    if (e.target.value > total_row) {
+      alert("Row cannot exceed than " + total_row);
+      e.target.value = total_row;
+    }
+  }
+
+  function changeColumn(e) {
+    if (e.target.value > total_column) {
+      alert("Column cannot exceed than " + total_column);
+      e.target.value = total_column;
+    }
+  }
+
   function input0_input_handler() {
     total_row = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.to_number)(this.value);
     $$invalidate(0, total_row);
@@ -710,7 +728,7 @@ function instance($$self, $$props, $$invalidate) {
     $$invalidate(1, total_column);
   }
 
-  return [total_row, total_column, sentences, saveSettingForm, saveSentenceForm, deleteSentenceForm, input0_input_handler, input1_input_handler];
+  return [total_row, total_column, sentences, saveSettingForm, saveSentenceForm, deleteSentenceForm, changeRow, changeColumn, input0_input_handler, input1_input_handler];
 }
 
 var Admin = /*#__PURE__*/function (_SvelteComponent) {

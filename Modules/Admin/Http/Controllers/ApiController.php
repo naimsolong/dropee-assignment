@@ -9,6 +9,7 @@ use Illuminate\Routing\Controller;
 use App\Models;
 
 use App\Custom\RSP;
+use Illuminate\Database\Eloquent\Model;
 
 class ApiController extends Controller
 {
@@ -43,6 +44,12 @@ class ApiController extends Controller
     }
 
     function save_sentence(Request $request, $id = null) {
+        if(Models\Sentence::where('row', $request->row)->where('row', $request->column)->count() > 0) {
+            return RSP::json([
+                "message" => "Fail! The cell already occupied",
+            ]);
+        }
+
         if($id != null) {
             if($request->user()->sentences()->where('id', $id)->update([
                 "value" => $request->value,
