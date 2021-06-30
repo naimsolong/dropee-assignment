@@ -44,7 +44,7 @@ class ApiController extends Controller
     }
 
     function save_sentence(Request $request, $id = null) {
-        if(Models\Sentence::where('row', $request->row)->where('row', $request->column)->count() > 0) {
+        if(Models\Sentence::where('row', $request->row)->where('column', $request->column)->count() > 0) {
             return RSP::json([
                 "message" => "Fail! The cell already occupied",
             ]);
