@@ -14,7 +14,7 @@ Pre-requisites, need to install Composer, NPM, Apache and MySQL service accordin
 After done install all required services, may follow these step:
 
 1. Clone this repo
-2. Make sure .env file has been set
+2. Make sure already created a database and the .env file has been set
 3. Install required Composer package
 	```
 	composer install
