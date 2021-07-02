@@ -44,7 +44,14 @@ class ApiController extends Controller
     }
 
     function save_sentence(Request $request, $id = null) {
-        if(Models\Sentence::where('row', $request->row)->where('column', $request->column)->count() > 0) {
+        $setting = Models\Setting::where('user_id', $request->user()->id)->first();
+        if($request->row > $setting->row || $request->column > $setting->column) {
+            return RSP::json([
+                "message" => "Fail! The maximum row or column is not allowed",
+            ]);
+        }
+
+        if(Models\Sentence::where('user_id', $request->user()->id)->where('row', $request->row)->where('column', $request->column)->count() > 0) {
             return RSP::json([
                 "message" => "Fail! The cell already occupied",
             ]);
